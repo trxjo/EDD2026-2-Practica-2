@@ -1,56 +1,44 @@
-import java.util.Iterator;
 
+/**
+ * @author Trejo Garcia Ozkar Mauricio
+ * @version 2026-2
+ */
 public interface Listable<T>{
 
-    /**
-     * Método para agregar elemento a una lista
-     * 
-     * @param T elemento a agregar
-     */
+    //Agregar Cancion al inicio de la playList 
     public void agregar(T elem);
 
-    /**
-     * Método para buscar si un elemento se enceuntra en la lista
-     * 
-     * @param T elemento a buscar 
-     * @return boolean true si lo encuentra.
-     */
-    public boolean contiene(T elem);
 
-    /**
-     * Metodo para verificar si una lista esta vacia
-     * 
-     * @return boolean, true esta vacia, false tiene un elemento
-     */
-    public boolean estaVacio();
-
-    /**
-     * Metodo para vaciar la lista
-     */
-    public void vacia();
-
-    /**
-     * Metodo para encontrar el primer elemento de una lista
-     * 
-     * @return T elemento en primera posición
-     */
-    public T primerElemento();
-
-    /**
-     * Metodo para eliminar un elemento de la lista
-     * 
-     * @param T elemento a eliminar
-     */
-    public void eliminar(T elem);
+    //Agrgar Cancion al final de la playlist
+    public void agregarFinal(T elem);
 
 
-    /**
-     * Iterador para recorrer la lista
-     * @return iterator
-     */
-    Iterator<T> iterador();
+    //Eliminar un cancion por titulo
+    public void eliminarCancion(String titulo);
+    
+
+    //Buscar una cancion 
+    public boolean buscar(String titulo);
 
 
+    //Regresa toda la playlist completa
+    public void mostrarPlaylist();
+
+
+    //Mostrar la duracion total de la Playlist
+    public int duracionDeLaPlaylist();
+
+
+    //Reproducir cancion actual
+    public void reproducirCancion();
+
+
+    //Avanzar a la siguiente cancion 
+    public void siguienteCancion();
 
     
+    //Regresar a la siguiente cancion
+    public void anteriorCancion();
+
+
 }
